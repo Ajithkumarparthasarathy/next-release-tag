@@ -15,12 +15,7 @@ const generateNewTagFromOld = (oldYear, oldMonth, oldItr) => {
   return `v${newYear}.${newMonth}.${newItr}`;
 };
 
-const getNewReleaseTag = (oldReleaseTag) => {
-  alert(oldReleaseTag)
-  alert(typeof oldReleaseTag)
-  console.log(oldReleaseTag)
-  console.log(typeof oldReleaseTag)
-  oldReleaseTag = typeof oldReleaseTag !== "undefined" || oldReleaseTag == null || oldReleaseTag ==''  ? oldReleaseTag : "v55.12.2"
+const getNewReleaseTag = (oldReleaseTag = "v12.11.0") => {
   if (oldReleaseTag && oldReleaseTag.startsWith("v")) {
     const [oldYear, oldMonth, oldItr] = oldReleaseTag
       .substring(1)
