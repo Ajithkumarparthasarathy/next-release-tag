@@ -20,7 +20,7 @@ const getNewReleaseTag = (oldReleaseTag) => {
   alert(typeof oldReleaseTag)
   console.log(oldReleaseTag)
   console.log(typeof oldReleaseTag)
-  oldReleaseTag = typeof oldReleaseTag !== "undefined" ? oldReleaseTag : "v1.0"
+  oldReleaseTag = typeof oldReleaseTag !== "undefined" || oldReleaseTag == null || oldReleaseTag ==''  ? oldReleaseTag : "v55.12.2"
   if (oldReleaseTag && oldReleaseTag.startsWith("v")) {
     const [oldYear, oldMonth, oldItr] = oldReleaseTag
       .substring(1)
